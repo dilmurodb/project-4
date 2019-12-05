@@ -7,18 +7,31 @@ picturesRound.addEventListener("click", function openPictures() {
     // alert("u clicked pic round")
     // let pictureContainer = document.querySelector(".container");
     // pictureContainer.innerHTML
-    document.querySelector(".container").innerHTML = "pictures round"
+    // document.querySelector(".container").innerHTML = "pictures round"
+    let newImage = document.createElement("IMG");
+    newImage.setAttribute("src", questionOne.picture);
+    newImage.setAttribute("width", "300");
+    newImage.setAttribute("margin", "300");
+    document.body.appendChild(newImage);
 });
 
 
 aboutUSA.addEventListener("click", function openUSA() {
     // alert("u clicked USA round")
-    document.querySelector(".container").innerHTML = "USA round"
+    document.querySelector(".container").innerHTML = document.createElement("div");
+    // let parent = document.createElement("div");
+    // let p = document.createElement("p");
+    // parent.append("cool guy");
+    // console.log(parent.textContent)
 });
 
 geographyRound.addEventListener("click", function openGeography() {
     // alert("u clicked geogr round")
-    document.querySelector(".container").innerHTML = "geography round"
+    document.querySelector(".container").innerHTML = document.createElement("IMG");
+    let pic = document.createElement("IMG");
+    pic.setAttribute("src", questionOne.picture);
+    pic.setAttribute("width", "300");
+    document.body.appendChild(pic);
 });
 
 
