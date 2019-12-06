@@ -18,14 +18,27 @@ let allQuestions = [
     answerOptions: { A: "Zytglogge, Switzerland", B: "Old Town Hall Tower, Prague", C: "Galata Tower, Turkey", D: "Palazzo Vecchio, Italy"},
     correctAnswer: "Galata Tower, Turkey"
 }, 
+    {
+    picture: "https://images.unsplash.com/photo-1541791135449-168d91a780a1?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1301&q=80",
+    question: "What is the name of the building on the picture?",
+    answerOptions: { A: "Hassan II Mosque, Casablanca, Morocco", B: "The Blue Mosque, Turkey", C: "Kul Sharif Mosque, Russia", D: "Taj Mahal, India"},
+    correctAnswer: "Taj Mahal, India"
+}, 
+    {
+    picture: "https://images.unsplash.com/photo-1551352912-484163ad5be9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1351&q=80",
+    question: "What is the name of the building on the picture?",
+    answerOptions: { A: "St. Paul's Cathedral, UK", B: "Sydney Opera House, Australia", C: "Palace of Versailles, France", D: "Royal Exhibition Building, Australia"},
+    correctAnswer: "Sydney Opera House, Australia"
+}, 
     
 ]
+
 
 let count = 0; 
 
 let nextButton = document.querySelector("#nextbutton");
 nextButton.addEventListener("click", function nextTrivia() {
-    if (count < 2) {
+    if (count < 4) {
         count++
     } else {
         count = 0
