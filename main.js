@@ -40,8 +40,11 @@ let nextButton = document.querySelector("#nextbutton");
 nextButton.addEventListener("click", function nextTrivia() {
     if (count < 4) {
         count++
+        document.querySelector("#score").innerText=`Your Score is ${score}`
+        
     } else {
         alert("Your score is: "+score+" out of 5")
+        document.querySelector("#score").innerText=`Your Total Score is ${score} out of 5`
         count = 0
         score = 0
     }
