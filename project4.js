@@ -33,7 +33,7 @@ let allQuestions = [
     
 ]
 
-
+let score = 0;
 let count = 0; 
 
 let nextButton = document.querySelector("#nextbutton");
@@ -41,7 +41,9 @@ nextButton.addEventListener("click", function nextTrivia() {
     if (count < 4) {
         count++
     } else {
+        alert("Your score is: "+score+" out of 5")
         count = 0
+        score = 0
     }
     
     document.querySelector("#picture").src = allQuestions[count].picture;
@@ -56,22 +58,27 @@ nextButton.addEventListener("click", function nextTrivia() {
         document.querySelector("#optionA").addEventListener("click", function checkA() {
             if (allQuestions[count].answerOptions.A === allQuestions[count].correctAnswer) {
                 alert("you are correct!");
-                console.log(count)
-                console.log(allQuestions[count].correctAnswer)
+                score++
             } else {alert("incorrect")};
         })
+
         document.querySelector("#optionB").addEventListener("click", function checkB() {
             if (allQuestions[count].answerOptions.B === allQuestions[count].correctAnswer) {
                 alert("you are correct!");
+                score++
             } else {alert("incorrect")};
         })
+
         document.querySelector("#optionC").addEventListener("click", function checkC() {
             if (allQuestions[count].answerOptions.C === allQuestions[count].correctAnswer) {
                 alert("you are correct!");
+                score++
             } else {alert("incorrect")};
         })
+
         document.querySelector("#optionD").addEventListener("click", function checkD() {
             if (allQuestions[count].answerOptions.D === allQuestions[count].correctAnswer) {
                 alert("you are correct!");
+                score++
             } else {alert("incorrect")};
         })
