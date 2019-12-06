@@ -9,11 +9,10 @@ header {
     text-align: center;
 }
 
-#startbutton {
-    background-color: darkorange;
-    height: 30px;
+#nextbutton {
     font-size: 20px;
-    padding: 0 10px;
+    padding: 0 20px;
+    background-color: gold;
 }
 
 main {
@@ -40,7 +39,6 @@ footer {
 }
 
 .options {
-    /* background-color: coral; */
     margin: 5px;
     height: 70px;
     width: 150px;
@@ -57,8 +55,3 @@ footer {
     color: red;
     font-size: 25;
 }
-
-/* .sectionbutton {
-    font-size: 15px;
-    margin-top: 20px;
-} */

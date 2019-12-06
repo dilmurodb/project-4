@@ -25,7 +25,12 @@ let count = 0;
 
 let nextButton = document.querySelector("#nextbutton");
 nextButton.addEventListener("click", function nextTrivia() {
-    count++
+    if (count < 2) {
+        count++
+    } else {
+        count = 0
+    }
+    
     document.querySelector("#picture").src = allQuestions[count].picture;
     document.querySelector("#question").innerText = allQuestions[count].question;
     document.querySelector("#optionA").innerText = allQuestions[count].answerOptions.A;
@@ -33,8 +38,6 @@ nextButton.addEventListener("click", function nextTrivia() {
     document.querySelector("#optionC").innerText = allQuestions[count].answerOptions.C;
     document.querySelector("#optionD").innerText = allQuestions[count].answerOptions.D;
     
-    // count++
-    console.log(count)
 })
 
         document.querySelector("#optionA").addEventListener("click", function checkA() {
