@@ -1,48 +1,61 @@
-let picturesRound = document.querySelector("#pictures");
-let aboutUSA = document.querySelector("#USA");
-let geographyRound = document.querySelector("#geography");
 
+let allQuestions = [
+    {
+    picture: "https://images.unsplash.com/photo-1522459346908-436e555a0e84?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1778&q=80",
+    question: "What is the name of the building on the picture?",
+    answerOptions: { A: "Guggenheim, USA", B: "Louvre, France", C: "Smithsonian National Museum, USA", D: "The British Museum, UK" },
+    correctAnswer: "Louvre, France"
+}, 
+    {
+    picture: "https://images.unsplash.com/photo-1557094692-0a39333c1025?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1353&q=80",
+    question: "What is the name of the building on the picture?",
+    answerOptions: { A: "Acropolis, Greece", B: "Marcello Theater, Italy", C: "Temple of Artemis, Turkey", D: "Hadrian's Wall, England"},
+    correctAnswer: "Acropolis, Greece"
+}, 
+    {
+    picture: "https://images.unsplash.com/photo-1565861388980-5323444cbb41?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80",
+    question: "What is the name of the building on the picture?",
+    answerOptions: { A: "Zytglogge, Switzerland", B: "Old Town Hall Tower, Prague", C: "Galata Tower, Turkey", D: "Palazzo Vecchio, Italy"},
+    correctAnswer: "Galata Tower, Turkey"
+}, 
+    
+]
 
-picturesRound.addEventListener("click", function openPictures() {
-    // alert("u clicked pic round")
-    // let pictureContainer = document.querySelector(".container");
-    // pictureContainer.innerHTML
-    // document.querySelector(".container").innerHTML = "pictures round"
-    let newImage = document.createElement("IMG");
-    newImage.setAttribute("src", questionOne.picture);
-    newImage.setAttribute("width", "300");
-    newImage.setAttribute("margin", "300");
-    document.body.appendChild(newImage);
-});
+let count = 0; 
 
+let nextButton = document.querySelector("#nextbutton");
+nextButton.addEventListener("click", function nextTrivia() {
+    count++
+    document.querySelector("#picture").src = allQuestions[count].picture;
+    document.querySelector("#question").innerText = allQuestions[count].question;
+    document.querySelector("#optionA").innerText = allQuestions[count].answerOptions.A;
+    document.querySelector("#optionB").innerText = allQuestions[count].answerOptions.B;
+    document.querySelector("#optionC").innerText = allQuestions[count].answerOptions.C;
+    document.querySelector("#optionD").innerText = allQuestions[count].answerOptions.D;
+    
+    // count++
+    console.log(count)
+})
 
-aboutUSA.addEventListener("click", function openUSA() {
-    // alert("u clicked USA round")
-    document.querySelector(".container").innerHTML = document.createElement("div");
-    // let parent = document.createElement("div");
-    // let p = document.createElement("p");
-    // parent.append("cool guy");
-    // console.log(parent.textContent)
-});
-
-geographyRound.addEventListener("click", function openGeography() {
-    // alert("u clicked geogr round")
-    document.querySelector(".container").innerHTML = document.createElement("IMG");
-    let pic = document.createElement("IMG");
-    pic.setAttribute("src", questionOne.picture);
-    pic.setAttribute("width", "300");
-    document.body.appendChild(pic);
-});
-
-
-
-class PictureRound {
-    constructor(picture, question, answerOptions, correctAnswer) {
-        this.picture = picture;
-        this.question = question;
-        this.answerOptions = answerOptions;
-        this.correctAnswer = correctAnswer;
-    }
-};
-const questionOne = new PictureRound("https://images.unsplash.com/photo-1522459346908-436e555a0e84?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1778&q=80", "Who is the person on the picture?", ["John", "Bob", "Luke", "Grahm"], "Luke");
-console.log(questionOne)
+        document.querySelector("#optionA").addEventListener("click", function checkA() {
+            if (allQuestions[count].answerOptions.A === allQuestions[count].correctAnswer) {
+                alert("you are correct!");
+                console.log(count)
+                console.log(allQuestions[count].correctAnswer)
+            } else {alert("incorrect")};
+        })
+        document.querySelector("#optionB").addEventListener("click", function checkB() {
+            if (allQuestions[count].answerOptions.B === allQuestions[count].correctAnswer) {
+                alert("you are correct!");
+            } else {alert("incorrect")};
+        })
+        document.querySelector("#optionC").addEventListener("click", function checkC() {
+            if (allQuestions[count].answerOptions.C === allQuestions[count].correctAnswer) {
+                alert("you are correct!");
+            } else {alert("incorrect")};
+        })
+        document.querySelector("#optionD").addEventListener("click", function checkD() {
+            if (allQuestions[count].answerOptions.D === allQuestions[count].correctAnswer) {
+                alert("you are correct!");
+            } else {alert("incorrect")};
+        })
