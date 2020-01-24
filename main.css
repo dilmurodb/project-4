@@ -1,75 +1,75 @@
 body {
-    background-image: url("https://image.shutterstock.com/z/stock-vector-traveler-s-accessories-vacation-elements-it-s-time-to-travel-text-travel-concept-background-1101802286.jpg");
-    background-repeat: no-repeat;
-    background-size: 1280px;
+  background-image: url("https://image.shutterstock.com/z/stock-vector-traveler-s-accessories-vacation-elements-it-s-time-to-travel-text-travel-concept-background-1101802286.jpg");
+  background-repeat: no-repeat;
+  /* background-size: 1280px; */
+  background-size: 100%;
 }
 
 header {
-    height: 90px;
-    text-align: center;
+  height: 90px;
+  text-align: center;
 }
 
 #nextbutton {
-    font-size: 20px;
-    padding: 0 20px;
-    background-color: gold;
+  font-size: 20px;
+  padding: 0 20px;
+  background-color: gold;
 }
 
 main {
-    height: 550px;
+  height: 550px;
 }
 
 footer {
-    height: 80px;
-    margin-top: 90px;
-    margin-bottom: 10px;
-    font-size: 20px;
-    color: maroon;
+  height: 80px;
+  margin-top: 90px;
+  margin-bottom: 10px;
+  font-size: 20px;
+  color: maroon;
 }
 
 #top {
-    font-size: 50px;
-    margin-bottom: 5px;
-    color: darkmagenta;
+  font-size: 50px;
+  margin-bottom: 5px;
+  color: darkmagenta;
 }
 
 .container {
-    display: flex;
-    height: 50px;
-    flex-direction: column;
-    justify-content: flex-start;
-    margin: 10px 10px;
-    font-size: 20px;
+  display: flex;
+  height: 50px;
+  flex-direction: column;
+  justify-content: flex-start;
+  margin: 10px 10px;
+  font-size: 20px;
 }
 
 .options {
-    margin: 5px;
-    height: 70px;
-    width: 150px;
-    text-align: center;
-    
+  margin: 5px;
+  height: 70px;
+  width: 150px;
+  text-align: center;
 }
 
 #picture {
-    width: 500px;
-    height: 250px;
+  width: 500px;
+  height: 250px;
 }
 
 #question {
-    color: black;
-    font-size: 25px;
-    margin-bottom: 5px;
+  color: black;
+  font-size: 25px;
+  margin-bottom: 5px;
 }
 
-.optionAll{
-    border: solid 5px rgba(28, 157, 231, 0.973);
-    background-color: rgb(243, 222, 29);
-    width: 35%;
-    padding: 0;
-    margin-top: 0;
+.optionAll {
+  border: solid 5px rgba(28, 157, 231, 0.973);
+  background-color: rgb(243, 222, 29);
+  width: 35%;
+  padding: 0;
+  margin-top: 0;
 }
 
 #score {
-    color: maroon;
-    font-size:20px;
+  color: maroon;
+  font-size: 20px;
 }
